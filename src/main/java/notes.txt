@@ -1,0 +1,39 @@
+A Program to demonstrate the use of @Qualifier annotation:
+Programs:
+* OfflinePayment.java
+* OnlinePayment.java
+* Payment.java
+* Product.java
+* Sales.java
+* AppConfig.java
+* Test.java
+Note:
+* @Qualifier annotation is used get qualified bean of the dependency, if the single dependency has one or more qualified beans.
+* @Qualifier annotation can be used at field, method, parameter, class and annotation level.
+* @Qualifier annotation has single attribute value, this is for to pass bean id.
+* If we did not given the value attribute or given wrong value attribute then container throws the exception  org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'class Name'.
+* This annotation is mainly used to resolve the 'org.springframework.beans.factory.NoUniqueBeanDefinitionException' Exception.
+Output:
+---------- Beans Names -----------
+org.springframework.context.annotation.internalConfigurationAnnotationProcessor
+org.springframework.context.annotation.internalAutowiredAnnotationProcessor
+org.springframework.context.annotation.internalCommonAnnotationProcessor
+org.springframework.context.event.internalEventListenerProcessor
+org.springframework.context.event.internalEventListenerFactory
+appConfig
+offlinePayment
+onlinePayment
+sales
+iphone
+mi
+samsung
+oneplus
+----- Product Details -------
+Product [productName=Samsung-Galaxy, quantity=6, price=55000.0, vendor=Samsung]
+------- Payment Details -------
+Payment mode is: Online
+------- Expensive Product Details -------
+Product [productName=Iphone-15Pro, quantity=12, price=75000.0, vendor=Apple]
+------- Cheap Product Details -------
+Product [productName=Mi-Y2, quantity=12, price=25000.0, vendor=Xiomi]
+
